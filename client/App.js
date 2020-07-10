@@ -26,7 +26,7 @@ const App = () => {
   return (
     // <PaperProvider>
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: true }}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="NavigationTab" component={NavigationPage} />
         <Stack.Screen name="DailyQuest" component={DailyQuestPage} />
         <Stack.Screen name="Analysis" component={AnalysisPage} />

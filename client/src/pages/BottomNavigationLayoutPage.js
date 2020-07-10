@@ -11,35 +11,35 @@ const Tab = createMaterialBottomTabNavigator();
 const BottomNavigationLayoutPage = () => {
   return (
     <Tab.Navigator
-      initialRouteName="DailyQuest"
+      initialRouteName="Daily Quest"
       barStyle={{ backgroundColor: '#fec89a' }}
       tabBarOptions={{
         activeTintColor: 'white',
         inactiveTintColor: 'gray',
-        showLabel: true,
+        showLabel: false,
       }}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color }) => {
           let iconName;
-          if (route.name === 'DailyQuest') {
+          if (route.name === 'Daily Quest') {
             iconName = focused ? 'ios-checkbox' : 'ios-checkbox-outline';
           } else if (route.name === 'Analysis') {
             iconName = focused ? 'ios-bar-chart' : 'ios-bar-chart-outline';
-          } else if (route.name === 'MapleInfo') {
+          } else if (route.name === 'Maple Info') {
             iconName = focused
               ? 'information-circle'
               : 'information-circle-outline';
-          } else if (route.name === 'UnionLink') {
+          } else if (route.name === 'Union') {
             iconName = focused ? 'ios-attach' : 'ios-attach-outline';
           }
 
           return <Ionicons name={iconName} size={25} color={color} />;
         },
       })}>
-      <Tab.Screen name="DailyQuest" component={DailyQuestPage} />
+      <Tab.Screen name="Daily Quest" component={DailyQuestPage} />
       <Tab.Screen name="Analysis" component={AnalysisPage} />
-      <Tab.Screen name="MapleInfo" component={MapleInfoPage} />
-      <Tab.Screen name="UnionLink" component={UnionLinkPage} />
+      <Tab.Screen name="Maple Info" component={MapleInfoPage} />
+      <Tab.Screen name="Union" component={UnionLinkPage} />
     </Tab.Navigator>
   );
 };
