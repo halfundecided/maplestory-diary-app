@@ -117,9 +117,7 @@ const MapleInfoPage = ({ navigation }) => {
                     </Text>
                   </Body>
                   <Right>
-                    <Button
-                      transparent
-                      onPress={() => navigation.navigate('EventPost1')}>
+                    <Button transparent>
                       <Ionicons name={'chevron-forward-outline'} size={20} />
                     </Button>
                   </Right>
