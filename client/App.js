@@ -6,10 +6,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import NavigationPage from './src/pages/BottomNavigationLayoutPage';
-import DailyQuestPage from './src/pages/DailyQuestPage';
-import AnalysisPage from './src/pages/AnalysisPage';
-import MapleInfoPage from './src/pages/MapleInfoPage';
-import UnionLinkPage from './src/pages/UnionLinkPage';
+import DailyQuestPage from './src/pages/DailyQuestPage/DailyQuestPage';
+import AnalysisPage from './src/pages/AnalysisPage/AnalysisPage';
+import MapleInfoPage from './src/pages/MapleInfoPage/MapleInfoPage';
+import UnionLinkPage from './src/pages/UnionLinkPage/UnionLinkPage';
 
 // const theme = {
 //   ...DefaultTheme,

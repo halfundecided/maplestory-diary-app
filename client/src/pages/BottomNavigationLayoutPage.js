@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import DailyQuestPage from './DailyQuestPage';
-import AnalysisPage from './AnalysisPage';
-import MapleInfoPage from './MapleInfoPage';
-import UnionLinkPage from './UnionLinkPage';
+import DailyQuestPage from './DailyQuestPage/DailyQuestPage';
+import AnalysisPage from './AnalysisPage/AnalysisPage';
+import MapleInfoPage from './MapleInfoPage/MapleInfoPage';
+import UnionLinkPage from './UnionLinkPage/UnionLinkPage';
 
 const Tab = createMaterialBottomTabNavigator();
 

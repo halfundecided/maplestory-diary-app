@@ -1,42 +1,30 @@
 import * as React from 'react';
 import { StyleSheet, Text, ScrollView } from 'react-native';
-import {
-  Container,
-  Header,
-  Left,
-  Body,
-  Right,
-  Title,
-  Subtitle,
-  Button,
-  Card,
-  CardItem,
-  Thumbnail,
-} from 'native-base';
+import { Container, Right, Card, CardItem, Thumbnail } from 'native-base';
+import { AppHeader } from '../../components';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import symbol1 from '../assets/images/symbol-vj.png';
-import symbol2 from '../assets/images/symbol-chuchu.png';
-import symbol3 from '../assets/images/symbol-lachelein.png';
-import symbol4 from '../assets/images/symbol-arcana.png';
-import symbol5 from '../assets/images/symbol-morass.png';
-import symbol6 from '../assets/images/symbol-esfera.png';
-import dailyGift from '../assets/images/daily-gift.png';
-import monsterPark from '../assets/images/monster-park.png';
-import mileage from '../assets/images/mileage.png';
-import zakum from '../assets/images/zakum.png';
-import magnus from '../assets/images/magnus.png';
-import hilla from '../assets/images/hilla.png';
-import horntail from '../assets/images/horntail.png';
-import kaun from '../assets/images/kaun.png';
-import papulatus from '../assets/images/papulatus.png';
-import arkarium from '../assets/images/arkarium.png';
-import pinkbean from '../assets/images/pinkbean.png';
-import vonleon from '../assets/images/vonleon.png';
-import rootabyss from '../assets/images/rootabyss.png';
-import ursus from '../assets/images/ursus.png';
-import event from '../assets/images/event.png';
-import eventcoin from '../assets/images/eventcoin.png';
-
+import symbol1 from '../../assets/images/symbol-vj.png';
+import symbol2 from '../../assets/images/symbol-chuchu.png';
+import symbol3 from '../../assets/images/symbol-lachelein.png';
+import symbol4 from '../../assets/images/symbol-arcana.png';
+import symbol5 from '../../assets/images/symbol-morass.png';
+import symbol6 from '../../assets/images/symbol-esfera.png';
+import dailyGift from '../../assets/images/daily-gift.png';
+import monsterPark from '../../assets/images/monster-park.png';
+import mileage from '../../assets/images/mileage.png';
+import zakum from '../../assets/images/zakum.png';
+import magnus from '../../assets/images/magnus.png';
+import hilla from '../../assets/images/hilla.png';
+import horntail from '../../assets/images/horntail.png';
+import kaun from '../../assets/images/kaun.png';
+import papulatus from '../../assets/images/papulatus.png';
+import arkarium from '../../assets/images/arkarium.png';
+import pinkbean from '../../assets/images/pinkbean.png';
+import vonleon from '../../assets/images/vonleon.png';
+import rootabyss from '../../assets/images/rootabyss.png';
+import ursus from '../../assets/images/ursus.png';
+import event from '../../assets/images/event.png';
+import eventcoin from '../../assets/images/eventcoin.png';
 const eventContent = [
   {
     title: '각성의 비급 등급업',
@@ -152,18 +140,11 @@ const dailyBoss = [
 const DailyQuestPage = () => {
   return (
     <Container>
-      <Header>
-        <Left />
-        <Body>
-          <Title>{'데일리 퀘스트'}</Title>
-          <Subtitle>{'🍁오늘의 숙제 기록🍁'}</Subtitle>
-        </Body>
-        <Right>
-          <Button transparent>
-            <Ionicons name={'person-outline'} size={20} />
-          </Button>
-        </Right>
-      </Header>
+      <AppHeader
+        title={'데일리 퀘스트'}
+        subtitle={'🍁오늘의 숙제 기록🍁'}
+        icon={'person-outline'}
+      />
       <ScrollView>
         <Card style={styles.card}>
           <CardItem header bordered>
