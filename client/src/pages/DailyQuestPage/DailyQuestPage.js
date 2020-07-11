@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, Text, ScrollView } from 'react-native';
-import { Container, Right, Card, CardItem, Thumbnail } from 'native-base';
+import { StyleSheet, ScrollView } from 'react-native';
+import { Container, Text, Right, Card, CardItem, Thumbnail } from 'native-base';
 import { AppHeader } from '../../components';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import symbol1 from '../../assets/images/symbol-vj.png';
@@ -148,7 +148,7 @@ const DailyQuestPage = () => {
       <ScrollView>
         <Card style={styles.card}>
           <CardItem header bordered>
-            <Text>AWAKE 코인이벤트 - 각성의 비급</Text>
+            <Text style={styles.listTitle}>AWAKE 코인이벤트 - 각성의 비급</Text>
           </CardItem>
           {eventContent.map((ev) => (
             <CardItem key={ev.title} bordered style={styles.cardItem}>
@@ -162,7 +162,7 @@ const DailyQuestPage = () => {
         </Card>
         <Card style={styles.card}>
           <CardItem header bordered>
-            <Text>일일퀘스트 - 아케인 심볼</Text>
+            <Text style={styles.listTitle}>일일퀘스트 - 아케인 심볼</Text>
           </CardItem>
           {arcaneSymbol.map((symbol) => (
             <CardItem key={symbol.title} bordered style={styles.cardItem}>
@@ -176,7 +176,7 @@ const DailyQuestPage = () => {
         </Card>
         <Card style={styles.card}>
           <CardItem header bordered>
-            <Text>일일컨텐츠</Text>
+            <Text style={styles.listTitle}>일일컨텐츠</Text>
           </CardItem>
           {dailyContent.map((content) => (
             <CardItem key={content.title} bordered style={styles.cardItem}>
@@ -190,7 +190,7 @@ const DailyQuestPage = () => {
         </Card>
         <Card style={styles.card}>
           <CardItem header bordered>
-            <Text>일일 보스</Text>
+            <Text style={styles.listTitle}>일일 보스</Text>
           </CardItem>
           {dailyBoss.map((boss) => (
             <CardItem key={boss.title} bordered style={styles.cardItem}>
@@ -214,6 +214,9 @@ const styles = StyleSheet.create({
   },
   cardItem: {
     height: 55,
+  },
+  listTitle: {
+    color: 'black',
   },
   thumbnail: {
     marginLeft: 30,
