@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image } from 'react-native';
-import { Card, CardItem, Body, Text, Button, Left, Right } from 'native-base';
+import { Card, CardItem, Body, Text, Button } from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+// to pass selected state later to UnionLinkPage
+// https://stackoverflow.com/questions/58440442/passing-data-from-child-to-parents-react-hooks
+
 const CharacterCard = ({ name, imageSrc }) => {
+  const [selected, setSelected] = useState(false);
+  const handleSelected = () => {
+    setSelected(!selected);
+  };
   return (
     <Card>
       <CardItem cardBody>
@@ -17,14 +24,22 @@ const CharacterCard = ({ name, imageSrc }) => {
       <CardItem>
         <Body>
           <Button
+            onPress={handleSelected}
             iconLeft
             small
             warning
             style={{ marginLeft: 0, alignSelf: 'center' }}>
-            <Ionicons
-              name="heart-outline"
-              style={{ paddingLeft: 10, color: 'white' }}
-            />
+            {selected ? (
+              <Ionicons
+                name="heart-outline"
+                style={{ paddingLeft: 10, color: 'white' }}
+              />
+            ) : (
+              <Ionicons
+                name="heart"
+                style={{ paddingLeft: 10, color: 'white' }}
+              />
+            )}
             <Text>{name}</Text>
           </Button>
         </Body>

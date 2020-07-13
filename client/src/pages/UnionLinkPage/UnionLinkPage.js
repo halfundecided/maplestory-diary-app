@@ -1,5 +1,5 @@
-import React from 'react';
-import { ScrollView, StyleSheet, Image } from 'react-native';
+import React, { useState } from 'react';
+import { ScrollView } from 'react-native';
 import { Container } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { AppHeader } from '../../components';
@@ -266,6 +266,11 @@ const charInfo15 = [
 ];
 
 const UnionLinkPage = () => {
+  const [selected, setSelected] = useState(false);
+  const handleSelected = () => {
+    setSelected(!selected);
+  };
+
   return (
     <Container>
       <AppHeader
