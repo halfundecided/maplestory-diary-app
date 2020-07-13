@@ -33,6 +33,15 @@ import rootabyss from '../../assets/images/rootabyss.png';
 import ursus from '../../assets/images/ursus.png';
 import event from '../../assets/images/event.png';
 import eventcoin from '../../assets/images/eventcoin.png';
+import pierre from '../../assets/images/pierre.png';
+import queen from '../../assets/images/queen.png';
+import vellum from '../../assets/images/vellum.png';
+import vonbon from '../../assets/images/vonbon.png';
+import damien from '../../assets/images/damien.png';
+import cygnus from '../../assets/images/cygnus.png';
+import lotus from '../../assets/images/lotus.png';
+import lucid from '../../assets/images/lucid.png';
+import will from '../../assets/images/will.png';
 
 const eventContent = [
   {
@@ -174,9 +183,79 @@ const dailyBoss = [
     img: ursus,
   },
 ];
+const weeklyBoss = [
+  {
+    id: 60,
+    title: '하드 힐라',
+    img: hilla,
+  },
+  {
+    id: 61,
+    title: '카오스 핑크빈',
+    img: pinkbean,
+  },
+  {
+    id: 62,
+    title: '카오스 자쿰',
+    img: zakum,
+  },
+  {
+    id: 63,
+    title: '시그너스',
+    img: cygnus,
+  },
+  {
+    id: 64,
+    title: '카오스 블러디퀸',
+    img: queen,
+  },
+  {
+    id: 65,
+    title: '카오스 삐에르',
+    img: pierre,
+  },
+  {
+    id: 66,
+    title: '카오스 반반',
+    img: vonbon,
+  },
+  {
+    id: 67,
+    title: '카오스 벨룸',
+    img: vellum,
+  },
+  {
+    id: 68,
+    title: '하드 매그너스',
+    img: magnus,
+  },
+  {
+    id: 69,
+    title: '스우',
+    img: lotus,
+  },
+  {
+    id: 70,
+    title: '데미안',
+    img: damien,
+  },
+  {
+    id: 71,
+    title: '카오스 파풀라투스',
+    img: papulatus,
+  },
+  {
+    id: 72,
+    title: '루시드',
+    img: lucid,
+  },
+  {
+    id: 73,
+    title: '윌',
+    img: will,
+  },
+];
 const DailyQuestPage = () => {
-  const [event1, setEvent1] = useState(false);
-  const [event2, setEvent2] = useState(false);
   return (
     <Container>
       <AppHeader
@@ -192,7 +271,7 @@ const DailyQuestPage = () => {
           {eventContent.map((e) => (
             <TouchableOpacity key={e.id}>
               <CardItem bordered style={styles.cardItem}>
-                <Thumbnail style={styles.thumbnail} source={e.img} />
+                <Thumbnail style={styles.thumbnail} source={e.img} square />
                 <Text style={styles.text}>{e.title}</Text>
                 <Right style={styles.right}>
                   <Ionicons name={'checkmark-circle-outline'} size={20} />
@@ -208,7 +287,11 @@ const DailyQuestPage = () => {
           {arcaneSymbol.map((symbol) => (
             <TouchableOpacity key={symbol.id}>
               <CardItem bordered style={styles.cardItem}>
-                <Thumbnail style={styles.thumbnail} source={symbol.img} />
+                <Thumbnail
+                  style={styles.thumbnail}
+                  source={symbol.img}
+                  square
+                />
                 <Text style={styles.text}>{symbol.title}</Text>
                 <Right style={styles.right}>
                   <Ionicons name={'checkmark-circle-outline'} size={20} />
@@ -223,7 +306,7 @@ const DailyQuestPage = () => {
           </CardItem>
           {dailyContent.map((content) => (
             <CardItem key={content.id} bordered style={styles.cardItem}>
-              <Thumbnail style={styles.thumbnail} source={content.img} />
+              <Thumbnail style={styles.thumbnail} source={content.img} square />
               <Text style={styles.text}>{content.title}</Text>
               <Right style={styles.right}>
                 <Ionicons name={'checkmark-circle-outline'} size={20} />
@@ -237,7 +320,21 @@ const DailyQuestPage = () => {
           </CardItem>
           {dailyBoss.map((boss) => (
             <CardItem key={boss.id} bordered style={styles.cardItem}>
-              <Thumbnail style={styles.thumbnail} source={boss.img} />
+              <Thumbnail style={styles.thumbnail} source={boss.img} square />
+              <Text style={styles.text}>{boss.title}</Text>
+              <Right style={styles.right}>
+                <Ionicons name={'checkmark-circle-outline'} size={20} />
+              </Right>
+            </CardItem>
+          ))}
+        </Card>
+        <Card style={styles.card}>
+          <CardItem header bordered>
+            <Text style={styles.listTitle}>주간 보스</Text>
+          </CardItem>
+          {weeklyBoss.map((boss) => (
+            <CardItem key={boss.id} bordered style={styles.cardItem}>
+              <Thumbnail style={styles.thumbnail} source={boss.img} square />
               <Text style={styles.text}>{boss.title}</Text>
               <Right style={styles.right}>
                 <Ionicons name={'checkmark-circle-outline'} size={20} />
