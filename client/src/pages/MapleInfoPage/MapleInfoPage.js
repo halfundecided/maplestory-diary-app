@@ -13,80 +13,80 @@ import {
   Text,
 } from 'native-base';
 import { AppHeader } from '../../components';
+import {
+  InfoSundayMaple,
+  EventImage1,
+  InfoBurning,
+  InfoChoice,
+  InfoRoyalStyle,
+  InfoRoyal,
+  InfoSkill,
+  InfoAbility,
+  InfoLinkUnion,
+} from '../../assets/images';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import eventImage from '../../assets/images/event.png';
-import burning from '../../assets/images/burning.png';
-import sunday from '../../assets/images/sunday.png';
-import royalface from '../../assets/images/royalface.png';
-import royalstyle from '../../assets/images/royalstyle.png';
-import choicehair from '../../assets/images/choicehair.png';
-import skill from '../../assets/images/skill.png';
-import ability from '../../assets/images/ability.png';
-import linkunion from '../../assets/images/linkunion.png';
 
 const eventList = [
   {
     num: 3,
     title: '이번주 썬데이 메이플',
     subtitle: '2020년 7월 12일 오전 0시 ~ 오후 1시 59분',
-    thumbnail: sunday,
+    thumbnail: InfoSundayMaple,
   },
   {
     num: 2,
     title: 'AWAKE 각성의 시간',
     subtitle: '각성의 비급, 선인의 보물, 코인상점',
-    thumbnail: eventImage,
+    thumbnail: EventImage1,
   },
   {
     num: 1,
     title: 'AWAKE 버닝',
     subtitle: '버닝월드, 테라버닝 플러스',
-    thumbnail: burning,
+    thumbnail: InfoBurning,
   },
 ];
-
 const cashUpdateList = [
   {
     num: 3,
     title: '초이스 헤어/성형외과 쿠폰',
     subtitle: '7월 9일 업데이트',
-    thumbnail: choicehair,
+    thumbnail: InfoChoice,
     subpage: 'CashUpdatePost3',
   },
   {
     num: 2,
     title: '로얄스타일 쿠폰&마스터피스',
     subtitle: '87기 스페셜 라벨: 산호의 기억',
-    thumbnail: royalstyle,
+    thumbnail: InfoRoyalStyle,
     subpage: 'CashUpdatePost2',
   },
   {
     num: 1,
     title: '로얄 헤어/성형외과 쿠폰',
     subtitle: '6월 18일 업데이트',
-    thumbnail: royalface,
+    thumbnail: InfoRoyal,
     subpage: 'CashUpdatePost1',
   },
 ];
-
 const infoList = [
   {
     num: 1,
     title: '직업별 스킬트리',
     subtitle: '직업별 스킬트리/하이퍼스킬 간단히 한눈에 보기',
-    thumbnail: skill,
+    thumbnail: InfoSkill,
   },
   {
     num: 2,
     title: '어빌리티',
     subtitle: '직업별 어빌리티 모음',
-    thumbnail: ability,
+    thumbnail: InfoAbility,
   },
   {
     num: 3,
     title: '링크/유니온',
     subtitle: '직업별 링크/유니온 효과 정리',
-    thumbnail: linkunion,
+    thumbnail: InfoLinkUnion,
   },
 ];
 
@@ -168,11 +168,7 @@ const MapleInfoPage = ({ navigation }) => {
                       {post.subtitle}
                     </Text>
                   </Body>
-                  <Right>
-                    {/* <Button transparent>
-                    <Ionicons name={'chevron-forward-outline'} size={20} />
-                  </Button> */}
-                  </Right>
+                  <Right />
                 </ListItem>
               ))}
             </List>

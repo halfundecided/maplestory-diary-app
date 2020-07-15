@@ -10,7 +10,7 @@ import {
   Text,
 } from 'native-base';
 import { AppHeader } from '../../components';
-import thumbnail from '../../assets/images/royalface.png';
+import { InfoRoyal } from '../../assets/images';
 
 const CashUpdatePost1 = () => {
   return (
@@ -23,7 +23,7 @@ const CashUpdatePost1 = () => {
       <Card>
         <CardItem>
           <Left>
-            <Thumbnail source={thumbnail} />
+            <Thumbnail source={InfoRoyal} />
             <Body>
               <Text>{'로얄 헤어/성형외과 쿠폰'}</Text>
               <Text note>{'6월 18일 업데이트'}</Text>

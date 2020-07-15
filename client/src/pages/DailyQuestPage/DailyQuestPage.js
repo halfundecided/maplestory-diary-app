@@ -1,59 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import {
-  Container,
-  Text,
-  Right,
-  Card,
-  CardItem,
-  Thumbnail,
-  Button,
-} from 'native-base';
+import { Container, Text, Right, Card, CardItem, Thumbnail } from 'native-base';
 import { AppHeader } from '../../components';
+import {
+  EventImage1,
+  EventImage2,
+  Symbol1,
+  Symbol2,
+  Symbol3,
+  Symbol4,
+  Symbol5,
+  Symbol6,
+  MonsterPark,
+  DailyGift,
+  Mileage,
+  BossZakum,
+  BossMagnus,
+  BossHilla,
+  BossHorntail,
+  BossKaung,
+  BossPapulatus,
+  BossArkarium,
+  BossPinkBean,
+  BossVonLeon,
+  BossRootAbyss,
+  BossUrsus,
+  BossCygnus,
+  BossQueen,
+  BossPierre,
+  BossVonbon,
+  BossVellum,
+  BossLotus,
+  BossDamien,
+  BossLucid,
+  BossWill,
+} from '../../assets/images';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import symbol1 from '../../assets/images/symbol-vj.png';
-import symbol2 from '../../assets/images/symbol-chuchu.png';
-import symbol3 from '../../assets/images/symbol-lachelein.png';
-import symbol4 from '../../assets/images/symbol-arcana.png';
-import symbol5 from '../../assets/images/symbol-morass.png';
-import symbol6 from '../../assets/images/symbol-esfera.png';
-import dailyGift from '../../assets/images/daily-gift.png';
-import monsterPark from '../../assets/images/monster-park.png';
-import mileage from '../../assets/images/mileage.png';
-import zakum from '../../assets/images/zakum.png';
-import magnus from '../../assets/images/magnus.png';
-import hilla from '../../assets/images/hilla.png';
-import horntail from '../../assets/images/horntail.png';
-import kaun from '../../assets/images/kaun.png';
-import papulatus from '../../assets/images/papulatus.png';
-import arkarium from '../../assets/images/arkarium.png';
-import pinkbean from '../../assets/images/pinkbean.png';
-import vonleon from '../../assets/images/vonleon.png';
-import rootabyss from '../../assets/images/rootabyss.png';
-import ursus from '../../assets/images/ursus.png';
-import event from '../../assets/images/event.png';
-import eventcoin from '../../assets/images/eventcoin.png';
-import pierre from '../../assets/images/pierre.png';
-import queen from '../../assets/images/queen.png';
-import vellum from '../../assets/images/vellum.png';
-import vonbon from '../../assets/images/vonbon.png';
-import damien from '../../assets/images/damien.png';
-import cygnus from '../../assets/images/cygnus.png';
-import lotus from '../../assets/images/lotus.png';
-import lucid from '../../assets/images/lucid.png';
-import will from '../../assets/images/will.png';
 
 const eventContent = [
   {
     id: 10,
     title: '각성의 비급 등급업',
-    img: event,
+    img: EventImage1,
     num: 1,
   },
   {
     _id: 11,
     title: '이벤트 코인',
-    img: eventcoin,
+    img: EventImage2,
     num: 2,
   },
 ];
@@ -61,198 +55,198 @@ const arcaneSymbol = [
   {
     id: 20,
     title: '소멸의 여로',
-    img: symbol1,
+    img: Symbol1,
   },
   {
     id: 21,
     title: '츄츄 아일랜드',
-    img: symbol2,
+    img: Symbol2,
   },
   {
     id: 22,
     title: '레헬른',
-    img: symbol3,
+    img: Symbol3,
   },
   {
     id: 23,
     title: '아르카나',
-    img: symbol4,
+    img: Symbol4,
   },
   {
     id: 24,
     title: '모라스',
-    img: symbol5,
+    img: Symbol5,
   },
   {
     id: 25,
     title: '에스페라',
-    img: symbol6,
+    img: Symbol6,
   },
   {
     id: 26,
     title: '에르다 스펙트럼',
-    img: symbol1,
+    img: Symbol1,
   },
   {
     id: 27,
     title: '배고픈 무토',
-    img: symbol2,
+    img: Symbol2,
   },
   {
     id: 28,
     title: '드림 브레이커',
-    img: symbol3,
+    img: Symbol3,
   },
   {
     id: 29,
     title: '스피릿 세이비어',
-    img: symbol4,
+    img: Symbol4,
   },
 ];
 const dailyContent = [
   {
     id: 30,
     title: '몬스터파크',
-    img: monsterPark,
+    img: MonsterPark,
   },
   {
     id: 31,
     title: '데일리 기프트',
-    img: dailyGift,
+    img: DailyGift,
   },
   {
     id: 32,
     title: '마일리지',
-    img: mileage,
+    img: Mileage,
   },
 ];
 const dailyBoss = [
   {
     id: 40,
     title: '자쿰',
-    img: zakum,
+    img: BossZakum,
   },
   {
     id: 41,
     title: '매그너스',
-    img: magnus,
+    img: BossMagnus,
   },
   {
     id: 42,
     title: '힐라',
-    img: hilla,
+    img: BossHilla,
   },
   {
     id: 43,
     title: '혼테일',
-    img: horntail,
+    img: BossHorntail,
   },
   {
     id: 44,
     title: '카웅',
-    img: kaun,
+    img: BossKaung,
   },
   {
     id: 45,
     title: '파풀라투스',
-    img: papulatus,
+    img: BossPapulatus,
   },
   {
     id: 46,
     title: '아카이럼',
-    img: arkarium,
+    img: BossArkarium,
   },
   {
     id: 47,
     title: '핑크빈',
-    img: pinkbean,
+    img: BossPinkBean,
   },
   {
     id: 48,
     title: '반 레온',
-    img: vonleon,
+    img: BossVonLeon,
   },
   {
     id: 49,
     title: '루타비스',
-    img: rootabyss,
+    img: BossRootAbyss,
   },
   {
     id: 50,
     title: '우르스',
-    img: ursus,
+    img: BossUrsus,
   },
 ];
 const weeklyBoss = [
   {
     id: 60,
     title: '하드 힐라',
-    img: hilla,
+    img: BossHilla,
   },
   {
     id: 61,
     title: '카오스 핑크빈',
-    img: pinkbean,
+    img: BossPinkBean,
   },
   {
     id: 62,
     title: '카오스 자쿰',
-    img: zakum,
+    img: BossZakum,
   },
   {
     id: 63,
     title: '시그너스',
-    img: cygnus,
+    img: BossCygnus,
   },
   {
     id: 64,
     title: '카오스 블러디퀸',
-    img: queen,
+    img: BossQueen,
   },
   {
     id: 65,
     title: '카오스 삐에르',
-    img: pierre,
+    img: BossPierre,
   },
   {
     id: 66,
     title: '카오스 반반',
-    img: vonbon,
+    img: BossVonbon,
   },
   {
     id: 67,
     title: '카오스 벨룸',
-    img: vellum,
+    img: BossVellum,
   },
   {
     id: 68,
     title: '하드 매그너스',
-    img: magnus,
+    img: BossMagnus,
   },
   {
     id: 69,
     title: '스우',
-    img: lotus,
+    img: BossLotus,
   },
   {
     id: 70,
     title: '데미안',
-    img: damien,
+    img: BossDamien,
   },
   {
     id: 71,
     title: '카오스 파풀라투스',
-    img: papulatus,
+    img: BossPapulatus,
   },
   {
     id: 72,
     title: '루시드',
-    img: lucid,
+    img: BossLucid,
   },
   {
     id: 73,
     title: '윌',
-    img: will,
+    img: BossWill,
   },
 ];
 const DailyQuestPage = () => {

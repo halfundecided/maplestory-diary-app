@@ -10,7 +10,7 @@ import {
   Text,
 } from 'native-base';
 import { AppHeader } from '../../components';
-import thumbnail from '../../assets/images/sunday.png';
+import { InfoSundayMaple } from '../../assets/images';
 
 const EventPost1 = () => {
   return (
@@ -23,7 +23,7 @@ const EventPost1 = () => {
       <Card>
         <CardItem>
           <Left>
-            <Thumbnail source={thumbnail} />
+            <Thumbnail source={InfoSundayMaple} />
             <Body>
               <Text>{'이번주 썬데이 메이플'}</Text>
               <Text note>{''}</Text>
